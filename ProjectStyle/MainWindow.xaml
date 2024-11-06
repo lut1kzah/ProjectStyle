@@ -1,0 +1,58 @@
+﻿<Window x:Class="ProjectStyle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectStyle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="620" Width="400" ResizeMode="NoResize" Background="Transparent" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
+    <Grid>
+        <Border Background="#272B2F" CornerRadius="20"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Ellipse Grid.Row="0" Width="350" Height="350" Grid.ColumnSpan="2" Margin="165,-130,-115,0" Fill="Gray"/>
+            <Image Source="Images/sneakers.png" x:Name="mainSneaker" Grid.Row="0" Grid.ColumnSpan="2" Width="200" Height="200" Margin="190,3,10,17" />
+            
+
+
+            <Label Content="Nike Flex Control 4" Style="{StaticResource lbHeading}"
+                   Grid.Row="1" Grid.ColumnSpan="2"/>
+            <TextBlock Text="Emphasizing lightweight comfort and stability, theNike Flex Control 4 is tailored to explosive workouts.Its lightweight, flexible upper has a midfoot strap forstability, while the sole has deep flex grooves to letyour foot move naturally" 
+                       Style="{StaticResource tbCharacter}" Grid.ColumnSpan="2" Grid.Row="2" TextWrapping="Wrap"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+                <Button Background="Gray" Style="{StaticResource buttonColor}" Click="ChangeButtonGray"/>
+                <Button Background="Blue" Style="{StaticResource buttonColor}" Click="ChangeButtonBlue" />
+                <Button Background="Black" Style="{StaticResource buttonColor}" Click="ChangeButtonBlack" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="4">
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{StaticResource buttonSize}" ToolTip="Size 36" Click="ButtonSize_Click"/>
+                    <Button Style="{StaticResource buttonSize}" ToolTip="Size 38" Click="ButtonSize_Click"/>
+                    <Button Style="{StaticResource buttonSize}" ToolTip="Size 40" Click="ButtonSize_Click"/>
+                    <Button Style="{StaticResource buttonSize}" ToolTip="Size 42" Click="ButtonSize_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{StaticResource buttonSize}" ToolTip="Size 37" Click="ButtonSize_Click"/>
+                    <Button Style="{StaticResource buttonSize}" ToolTip="Size 39" Click="ButtonSize_Click"/>
+                    <Button Style="{StaticResource buttonSize}" ToolTip="Size 41" Click="ButtonSize_Click"/>
+                    <Button Style="{StaticResource buttonSize}" ToolTip="Size 43" Click="ButtonSize_Click"/>
+                </StackPanel>
+            </StackPanel>
+            <Label Content="COLOR" Style="{StaticResource lbSubHeading}" Grid.Column="0" Grid.Row="3"/>
+            <Label Content="SIZE" Style="{StaticResource lbSubHeading}" Grid.Column="0" Grid.Row="4"/>
+            <Button Grid.ColumnSpan="2" Grid.Row="5" Content="Add to cart" Style="{StaticResource ButtonBasic}" Click="ButMessage" />
+        </Grid>
+    </Grid>
+</Window>
